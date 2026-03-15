@@ -1,0 +1,744 @@
+{
+  "1_sensitivity": {
+    "n": 321,
+    "mean_a": 0.8219757009345794,
+    "mean_b": 0.7966560747663552,
+    "mean_diff": 0.025319626168224304,
+    "ci_95": [
+      0.014075323863849075,
+      0.03656392847259953
+    ],
+    "t_stat": 4.430151120840492,
+    "p_value": 1.2946950647291297e-05,
+    "cohens_d": 0.24726692322117333
+  },
+  "2_ablation": {
+    "full_model_cohens_d": 0.24726692322117333,
+    "No-Jargon": {
+      "pearson_r_vs_full_orig": 0.9737577671521311,
+      "pearson_p_vs_full_orig": 3.900983518761883e-207,
+      "pearson_r_vs_full_enrich": 0.9689515402251818,
+      "pearson_p_vs_full_enrich": 1.186289950136959e-195,
+      "cohens_d_orig_enrich": 2.5665155172656298
+    },
+    "No-Explanation": {
+      "pearson_r_vs_full_orig": 0.5231209957949712,
+      "pearson_p_vs_full_orig": 6.0232078016562626e-24,
+      "pearson_r_vs_full_enrich": 0.47630199121749184,
+      "pearson_p_vs_full_enrich": 1.3937320438266373e-19,
+      "cohens_d_orig_enrich": 8.251705544198165
+    },
+    "No-Fluency": {
+      "pearson_r_vs_full_orig": 0.9925702115796676,
+      "pearson_p_vs_full_orig": 6.763017941307203e-294,
+      "pearson_r_vs_full_enrich": 0.9862666850471931,
+      "pearson_p_vs_full_enrich": 1.4717557855250544e-251,
+      "cohens_d_orig_enrich": 2.7455725272275444
+    },
+    "No-Coherence": {
+      "pearson_r_vs_full_orig": 0.9909201692823777,
+      "pearson_p_vs_full_orig": 4.635863858373851e-280,
+      "pearson_r_vs_full_enrich": 0.9866711207775771,
+      "pearson_p_vs_full_enrich": 1.2917342416606005e-253,
+      "cohens_d_orig_enrich": 2.3475782829756517
+    },
+    "No-Fidelity": {
+      "pearson_r_vs_full_orig": 0.9903177085451139,
+      "pearson_p_vs_full_orig": 1.2460697265562202e-275,
+      "pearson_r_vs_full_enrich": 0.9856034233623333,
+      "pearson_p_vs_full_enrich": 2.583246840232971e-248,
+      "cohens_d_orig_enrich": -0.1781308993120254
+    }
+  },
+  "3_baseline_comparison": {
+    "ClarityConsensus-Agents": 0.24726692322117333,
+    "BLEU-4": -4.356240205971431,
+    "ROUGE-L": -2.7503870413213733,
+    "BERTScore": -2.9131568445889875,
+    "FKGL": -1.1459941874210744,
+    "GFI": -1.2246161805689417,
+    "SMOG": -1.259373805221554,
+    "Coleman-Liau": -1.0216665858991076
+  },
+  "4_readability_correlation": {
+    "all": {
+      "FKGL": {
+        "pearson_r": -0.1349177999059223,
+        "pearson_p": 0.0006090974540982655,
+        "spearman_r": -0.12101049081409927,
+        "spearman_p": 0.002130227921256647
+      },
+      "GFI": {
+        "pearson_r": -0.14926559636775186,
+        "pearson_p": 0.00014707031804149222,
+        "spearman_r": -0.13646540575172372,
+        "spearman_p": 0.0005258776857153836
+      },
+      "SMOG": {
+        "pearson_r": -0.13877492534030175,
+        "pearson_p": 0.000421147103735954,
+        "spearman_r": -0.13230059355215162,
+        "spearman_p": 0.0007781699798767325
+      },
+      "Coleman-Liau": {
+        "pearson_r": -0.1757808713754332,
+        "pearson_p": 7.45954311766643e-06,
+        "spearman_r": -0.15979841230717065,
+        "spearman_p": 4.758124763870858e-05
+      }
+    },
+    "orig": {
+      "FKGL": {
+        "pearson_r": -0.23342618950634764,
+        "pearson_p": 2.3962025175150798e-05,
+        "spearman_r": -0.2522445302842227,
+        "spearman_p": 4.7415798175494165e-06
+      },
+      "GFI": {
+        "pearson_r": -0.2632725448118888,
+        "pearson_p": 1.7256039078932478e-06,
+        "spearman_r": -0.2904602447564981,
+        "spearman_p": 1.1683102758404551e-07
+      },
+      "SMOG": {
+        "pearson_r": -0.25109707495245803,
+        "pearson_p": 5.253580116576239e-06,
+        "spearman_r": -0.27252646003587283,
+        "spearman_p": 7.128768993303935e-07
+      },
+      "Coleman-Liau": {
+        "pearson_r": -0.3146037007789342,
+        "pearson_p": 8.334486765444226e-09,
+        "spearman_r": -0.3046704777680226,
+        "spearman_p": 2.5428602702287677e-08
+      }
+    },
+    "enrich": {
+      "FKGL": {
+        "pearson_r": 0.21339551305104523,
+        "pearson_p": 0.00011675033578126827,
+        "spearman_r": 0.20592431295093705,
+        "spearman_p": 0.00020325491365054998
+      },
+      "GFI": {
+        "pearson_r": 0.24713842352019633,
+        "pearson_p": 7.4550555887159515e-06,
+        "spearman_r": 0.2309314820118836,
+        "spearman_p": 2.941539589398502e-05
+      },
+      "SMOG": {
+        "pearson_r": 0.21097501838135688,
+        "pearson_p": 0.00014002014263940344,
+        "spearman_r": 0.20549764083868846,
+        "spearman_p": 0.00020967077267425714
+      },
+      "Coleman-Liau": {
+        "pearson_r": 0.11421736485093584,
+        "pearson_p": 0.040846339372903405,
+        "spearman_r": 0.11540465016450899,
+        "spearman_p": 0.03878247562050356
+      }
+    }
+  },
+  "5_internal_consistency": {
+    "jargon_vs_explanation": {
+      "pearson_r": 0.5202453175275613,
+      "p_value": 8.302233311651231e-46
+    },
+    "jargon_vs_fluency": {
+      "pearson_r": -0.005303330967038687,
+      "p_value": 0.8933129151096785
+    },
+    "jargon_vs_coherence": {
+      "pearson_r": -0.05822582921118659,
+      "p_value": 0.1405664047547116
+    },
+    "jargon_vs_fidelity": {
+      "pearson_r": -0.016481293092553875,
+      "p_value": 0.6768152862312153
+    },
+    "explanation_vs_fluency": {
+      "pearson_r": 0.07318861635658946,
+      "p_value": 0.06383869100580768
+    },
+    "explanation_vs_coherence": {
+      "pearson_r": -0.043451896276170424,
+      "p_value": 0.2716173330115802
+    },
+    "explanation_vs_fidelity": {
+      "pearson_r": 0.01999919059596578,
+      "p_value": 0.6129992057997161
+    },
+    "fluency_vs_coherence": {
+      "pearson_r": -0.021475276756306685,
+      "p_value": 0.5870356427907011
+    },
+    "fluency_vs_fidelity": {
+      "pearson_r": -0.39724853853097153,
+      "p_value": 1.066348837247449e-25
+    },
+    "coherence_vs_fidelity": {
+      "pearson_r": 0.1771631538471402,
+      "p_value": 6.303888547702305e-06
+    }
+  },
+  "6_test_retest": {
+    "ICC2_1": 0.9999992119836881,
+    "ci_95": [
+      1.0,
+      1.0
+    ]
+  },
+  "7_qualitative": [
+    {
+      "record_idx": 57,
+      "variant": "abstract_original",
+      "score": 0.8437,
+      "text_snippet": "Background: Sleep-disordered breathing (SDB) and atrial fibrillation (AF) are associated. This study investigated the impact of AF intervention on 6-month home sleep testing data. Methods: Sixty-seven patients (aged 66 to 86, 53% male) with persistent AF were randomized (1:1:1) to direct current car",
+      "jargon": 0.9502,
+      "explanation": 0.6667,
+      "fluency": 0.8249,
+      "coherence": 0.9326,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 12,
+      "variant": "abstract_enriched",
+      "score": 0.7628,
+      "text_snippet": "This work covers antidepressants that block removal of the chemical messengers, serotonin (5-HT) and norepinephrine (NE). These antidepressants bind to 5-HT and NE transporters with varying effect. Duloxetine, an antidepressant, is a stronger, more balanced drug for blocking the removal of 5-HT and ",
+      "jargon": 0.8718,
+      "explanation": 0.2667,
+      "fluency": 0.9461,
+      "coherence": 0.9427,
+      "fidelity": 0.9656
+    },
+    {
+      "record_idx": 140,
+      "variant": "abstract_enriched",
+      "score": 0.7137,
+      "text_snippet": "Wound pressure injuries have various names over the last few years. In the past, they were known as pressure ulvers, decubitus ulcers, or bed sores. Now, they are known as \"pressure injuries\". Pressure injuries are the breakdown of skin due to some forms of constant pressure. This can be from a bone",
+      "jargon": 0.9079,
+      "explanation": 0.0833,
+      "fluency": 0.7641,
+      "coherence": 0.9474,
+      "fidelity": 0.9892
+    },
+    {
+      "record_idx": 125,
+      "variant": "abstract_original",
+      "score": 0.8303,
+      "text_snippet": "A panel of internists and nephrologists developed this practical approach for the Kidney Disease Outcomes Quality Initiative to guide assessment and care of chronic kidney disease (CKD) by primary care clinicians. Chronic kidney disease is defined as a glomerular filtration rate (GFR) <60 mL/min/1.7",
+      "jargon": 0.9148,
+      "explanation": 0.5833,
+      "fluency": 0.9766,
+      "coherence": 0.9524,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 114,
+      "variant": "abstract_original",
+      "score": 0.8793,
+      "text_snippet": "This study aimed to monitor severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) viral loads and specific serum-antibodies (immunoglobulin [Ig] G and M) among confirmed patients and asymptomatic carriers from returning healthy travelers. The throat swabs, sputum, and stool samples from 57 ho",
+      "jargon": 0.9082,
+      "explanation": 0.7895,
+      "fluency": 0.9109,
+      "coherence": 0.9503,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 71,
+      "variant": "abstract_original",
+      "score": 0.841,
+      "text_snippet": "Abdominal thrusts or the Heimlich maneuver is a first-aid procedure used to treat upper airway obstruction caused by a foreign body. This skill is commonly taught during basic life support (BLS) and advanced cardiac life support (ACLS) classes, but it never receives as much attention as chest compre",
+      "jargon": 0.9652,
+      "explanation": 0.6,
+      "fluency": 0.9033,
+      "coherence": 0.9297,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 52,
+      "variant": "abstract_original",
+      "score": 0.6359,
+      "text_snippet": "Purpose of review: The prevalence of asthma is increasing in many parts of the world, particularly in developed countries. The present review focuses on recent literature regarding asthma prevention in childhood. Recent findings: Several environmental exposures in infancy or early childhood are asso",
+      "jargon": 0.88,
+      "explanation": 0.0,
+      "fluency": 0.9444,
+      "coherence": 0.9483,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 279,
+      "variant": "abstract_original",
+      "score": 0.822,
+      "text_snippet": "Background: Steroid resistant nephrotic syndrome (SRNS), while uncommon in children, is associated with significant morbidity. Calcineurin inhibitors (CNIs) remain the first line recommended therapy for children with non-genetic forms of SRNS, but some children fail to respond to them. Intravenous (",
+      "jargon": 0.963,
+      "explanation": 0.6,
+      "fluency": 0.7698,
+      "coherence": 0.9423,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 44,
+      "variant": "abstract_enriched",
+      "score": 0.7156,
+      "text_snippet": "Most swallowing problems can be treated, but the treatment depends on the type of swallowing difficulty. A multi-type team of surgeons, speech-related organ specialists, and speech-language therapists is needed to create appropriate treatment. A clear medical history, swallowing muscle examination, ",
+      "jargon": 0.9429,
+      "explanation": 0.0,
+      "fluency": 0.8496,
+      "coherence": 0.9491,
+      "fidelity": 0.9901
+    },
+    {
+      "record_idx": 302,
+      "variant": "abstract_original",
+      "score": 0.7391,
+      "text_snippet": "The aim of newborn screening is to detect newborns with serious, treatable disorders so as to facilitate appropriate interventions to avoid or ameliorate adverse outcomes. Mass biochemical testing of newborn babies was pioneered in the 1960s with the introduction of screening for phenylketonuria, a ",
+      "jargon": 0.9468,
+      "explanation": 0.35,
+      "fluency": 0.7655,
+      "coherence": 0.9372,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 216,
+      "variant": "abstract_original",
+      "score": 0.8365,
+      "text_snippet": "At the start of the COVID-19 pandemic, the Centers for Disease Control and Prevention (CDC) designed, manufactured, and distributed the CDC 2019-Novel Coronavirus (2019-nCoV) Real-Time RT-PCR Diagnostic Panel for SARS-CoV-2 detection. The diagnostic panel targeted three viral nucleocapsid gene loci ",
+      "jargon": 0.9673,
+      "explanation": 0.5714,
+      "fluency": 0.9029,
+      "coherence": 0.9515,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 16,
+      "variant": "abstract_original",
+      "score": 0.8829,
+      "text_snippet": "Hyperkalemia is a clinically important electrolyte abnormality that occurs most commonly in patients with chronic kidney disease. Due to its propensity to induce electrophysiological disturbances, severe hyperkalemia is considered a medical emergency. The management of acute and chronic hyperkalemia",
+      "jargon": 0.9059,
+      "explanation": 0.7647,
+      "fluency": 0.9922,
+      "coherence": 0.9488,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 15,
+      "variant": "abstract_original",
+      "score": 0.7981,
+      "text_snippet": "Hyperkalemia is a frequent clinical abnormality in patients with chronic kidney disease, and it is associated with higher risk of mortality and malignant arrhythmias. Severe hyperkalemia is a medical emergency, which requires immediate therapies, followed by interventions aimed at preventing its rec",
+      "jargon": 0.9119,
+      "explanation": 0.4667,
+      "fluency": 1.0,
+      "coherence": 0.9555,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 47,
+      "variant": "abstract_enriched",
+      "score": 0.8135,
+      "text_snippet": "Nerve-related, upper hand pain greatly affects patient performance and quality of life, even with proper treatment. This article looks at leading treatments that may improve pain care, including advanced treatments that are available. This article also reviews upcoming therapies, like spinal cord el",
+      "jargon": 0.8876,
+      "explanation": 0.5,
+      "fluency": 0.8363,
+      "coherence": 0.9482,
+      "fidelity": 0.9764
+    },
+    {
+      "record_idx": 111,
+      "variant": "abstract_enriched",
+      "score": 0.8119,
+      "text_snippet": "Coronavirus disease (COVID-19), which is a viral breathing-related disease, has affected over 100 countries worldwide. The hospital release criteria of patients with COVID-19 varies across countries. In China, patients with two tests detecting no virus and taken at least one day apart can be release",
+      "jargon": 0.8931,
+      "explanation": 0.5556,
+      "fluency": 0.7305,
+      "coherence": 0.9409,
+      "fidelity": 0.9609
+    },
+    {
+      "record_idx": 119,
+      "variant": "abstract_original",
+      "score": 0.9292,
+      "text_snippet": "Background: Genome-wide and clinical studies have linked the 677C\u2192T polymorphism in the gene encoding methylenetetrahydrofolate reductase (MTHFR) with hypertension, whilst limited evidence shows that intervention with riboflavin (i.e. the MTHFR co-factor) can lower blood pressure (BP) in hypertensiv",
+      "jargon": 0.9617,
+      "explanation": 0.8667,
+      "fluency": 0.9758,
+      "coherence": 0.9207,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 258,
+      "variant": "abstract_enriched",
+      "score": 0.8547,
+      "text_snippet": "Disease-causing variants in the sodium transporter gene (SCN1A) are amongst the most common genetic causes of childhood epilepsies (a brain disorder leading to seizures). There is considerable variation in both the types of causative gene types and associated physical effects. A recent increase of t",
+      "jargon": 0.9471,
+      "explanation": 0.6111,
+      "fluency": 0.7977,
+      "coherence": 0.9448,
+      "fidelity": 0.9794
+    },
+    {
+      "record_idx": 308,
+      "variant": "abstract_original",
+      "score": 0.7836,
+      "text_snippet": "Newborn dried blood spot screening (NBS) is a core public health service and is the largest application of genetic testing in the United States. NBS is conducted by state public health departments to identify infants with certain genetic, metabolic, and endocrine disorders. Screening is performed in",
+      "jargon": 0.9655,
+      "explanation": 0.375,
+      "fluency": 0.9515,
+      "coherence": 0.9477,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 13,
+      "variant": "abstract_enriched",
+      "score": 0.8275,
+      "text_snippet": "Studies of antidepressants in minors with depression or anxiety have shown a higher risk of suicide attempts and other severe mental issues, such as aggression and agitation, when taking antidepressants. Our objective was to see if healthy adolescents being treated for a non-mental condition also ha",
+      "jargon": 0.9346,
+      "explanation": 0.4444,
+      "fluency": 0.9927,
+      "coherence": 0.9378,
+      "fidelity": 0.9508
+    },
+    {
+      "record_idx": 287,
+      "variant": "abstract_original",
+      "score": 0.7658,
+      "text_snippet": "Total knee arthroplasty (TKA) is the gold standard treatment for end-stage knee osteoarthritis. Most patients report successful long-term outcomes and reduced pain after TKA, but recovery is variable and the majority of patients continue to demonstrate lower extremity muscle weakness and functional ",
+      "jargon": 0.9526,
+      "explanation": 0.3571,
+      "fluency": 0.9201,
+      "coherence": 0.931,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 101,
+      "variant": "abstract_enriched",
+      "score": 0.8335,
+      "text_snippet": "Vaccines are needed to prevent coronavirus disease 2019 (Covid-19), which is a breathing-related viral illness. Vaccines also protect those at high risk for issues. This randomized, controlled trial was performed at 99 centers across the United States. People at high risk for SARS-CoV-2, or Covid-19",
+      "jargon": 0.9319,
+      "explanation": 0.6667,
+      "fluency": 0.7224,
+      "coherence": 0.9297,
+      "fidelity": 0.8851
+    },
+    {
+      "record_idx": 214,
+      "variant": "abstract_enriched",
+      "score": 0.7728,
+      "text_snippet": "COVID-19 is an ongoing public health pandemic. Quality diagnostic tests are important for early detection and control. The World Health Organization (WHO) recommends some tests that detect COVID-19 virus. But we do not know how accurate these tests are. This study estimates accuracy of three commerc",
+      "jargon": 0.965,
+      "explanation": 0.375,
+      "fluency": 0.7003,
+      "coherence": 0.9368,
+      "fidelity": 0.8878
+    },
+    {
+      "record_idx": 112,
+      "variant": "abstract_enriched",
+      "score": 0.8168,
+      "text_snippet": "Certain molecular tools called RT-PCR assays test for infection with the SARS-CoV-2 virus, which can cause a threatening breathing-related illness. RT-PCR tests are very specific and detecting a target when there is none (or a false positive) is low. However, not detecting a target when there is one",
+      "jargon": 0.9417,
+      "explanation": 0.4545,
+      "fluency": 0.8251,
+      "coherence": 0.9531,
+      "fidelity": 0.965
+    },
+    {
+      "record_idx": 229,
+      "variant": "abstract_enriched",
+      "score": 0.7705,
+      "text_snippet": "Unlike iron, zinc gets into the body proportionately to taking it in with food, not depending on zinc presence in the body. As the amount of zinc in the food increases, the total amount of zinc that the body takes in increases, while the proportion of zinc that the body takes in goes down. The diges",
+      "jargon": 0.8908,
+      "explanation": 0.3333,
+      "fluency": 0.8682,
+      "coherence": 0.955,
+      "fidelity": 0.9331
+    },
+    {
+      "record_idx": 301,
+      "variant": "abstract_enriched",
+      "score": 0.9076,
+      "text_snippet": "Many disorders (but mostly ones that are inherited) can be detected early by looking at dried blood spot samples of newborns across the population. Phenylketonuria is an inherited disorder that can cause many issues with the brain. This disorder was the original example of how newborn screening can ",
+      "jargon": 0.9901,
+      "explanation": 0.7778,
+      "fluency": 0.7948,
+      "coherence": 0.947,
+      "fidelity": 0.9754
+    },
+    {
+      "record_idx": 142,
+      "variant": "abstract_original",
+      "score": 0.9631,
+      "text_snippet": "Elevated expression of \u03b2-amyloid (A\u03b21-42) and tau are considered risk-factors for Alzheimer's disease in healthy older adults. We investigated the effect of aging and cerebrospinal fluid levels of A\u03b21-42 and tau on 1) frontal metabolites measured with proton magnetic resonance spectroscopy (MRS) and",
+      "jargon": 0.9803,
+      "explanation": 1.0,
+      "fluency": 0.8622,
+      "coherence": 0.9445,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 3,
+      "variant": "abstract_original",
+      "score": 0.8199,
+      "text_snippet": "Muscular cramp is a common symptom in healthy people, especially among the elderly and in young people after vigorous or peak exercise. It is prominent in a number of benign neurological syndromes. It is a particular feature of chronic neurogenic disorders, especially amyotrophic lateral sclerosis. ",
+      "jargon": 0.957,
+      "explanation": 0.5,
+      "fluency": 0.9648,
+      "coherence": 0.9495,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 81,
+      "variant": "abstract_enriched",
+      "score": 0.6443,
+      "text_snippet": "Hiatal hernias, in which the stomach bulges into the chest, are common clinical findings. Hiatal hernias can lead to unwanted symptoms, trapped or twisted intestines, and reduced blood flow to certain body parts. This review examines the latest works on identifying and managing these stomach bulges ",
+      "jargon": 0.8291,
+      "explanation": 0.0,
+      "fluency": 0.6223,
+      "coherence": 0.9373,
+      "fidelity": 0.9593
+    },
+    {
+      "record_idx": 174,
+      "variant": "abstract_original",
+      "score": 0.827,
+      "text_snippet": "Objectives: To characterize the relationship of anifrolumab pharmacokinetics with efficacy and safety in patients with moderate to severe SLE despite standard therapy, using pooled data from 2 phase 3 trials. Methods: TULIP-1 and TULIP-2 were randomized, placebo-controlled, 52-week trials of intrave",
+      "jargon": 0.9491,
+      "explanation": 0.6923,
+      "fluency": 0.6729,
+      "coherence": 0.9248,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 79,
+      "variant": "abstract_enriched",
+      "score": 0.823,
+      "text_snippet": "Selective serotonin reuptake inhibitors (SSRIs), which increase serotonin, are recent, notable antidepressant drugs. SSRIs show similar success to other common antidepressants like amitriptyline and imipramine. Still, since the studies have small patient samples, no definite statements about the rel",
+      "jargon": 0.9442,
+      "explanation": 0.4667,
+      "fluency": 0.9376,
+      "coherence": 0.9375,
+      "fidelity": 0.9193
+    },
+    {
+      "record_idx": 110,
+      "variant": "abstract_original",
+      "score": 0.696,
+      "text_snippet": "The World Health Organization declared the novel coronavirus, named as SARS-CoV-2, as a global pandemic in early 2020 after the disease spread to more than 180 countries leading to tens of thousands of cases and many deaths within a couple of months. Consequently, this paper aims to summarize the ev",
+      "jargon": 0.882,
+      "explanation": 0.1875,
+      "fluency": 0.9771,
+      "coherence": 0.936,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 172,
+      "variant": "abstract_original",
+      "score": 0.8117,
+      "text_snippet": "Significance: Metformin has been proposed as a treatment for systemic lupus erythematosus (SLE). The primary target of metformin, the electron transport chain complex I in the mitochondria, is associated with redox homeostasis in immune cells, which plays a critical role in the pathogenesis of autoi",
+      "jargon": 0.9314,
+      "explanation": 0.5,
+      "fluency": 0.9959,
+      "coherence": 0.9319,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 47,
+      "variant": "abstract_original",
+      "score": 0.6136,
+      "text_snippet": "Upper extremity neuropathic pain states greatly impact patient functionality and quality of life, despite appropriate surgical intervention. This article focuses on the advanced therapies that may improve pain care, including advanced treatment strategies that are available. The article also surveys",
+      "jargon": 0.8587,
+      "explanation": 0.0,
+      "fluency": 0.8638,
+      "coherence": 0.937,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 194,
+      "variant": "abstract_enriched",
+      "score": 0.8663,
+      "text_snippet": "Occipital Neuralgia is the pain in the occipital nerves, the nerves that run from the top of the spinal cord up in the back of the head. It is considered a type of headaches, but some doctors suggest pain in the nerves in the back of the head is a different problem. Occipital neuralgia is a continui",
+      "jargon": 0.9247,
+      "explanation": 0.625,
+      "fluency": 0.9807,
+      "coherence": 0.938,
+      "fidelity": 0.9506
+    },
+    {
+      "record_idx": 49,
+      "variant": "abstract_enriched",
+      "score": 0.8696,
+      "text_snippet": "Diets low in carbs and proteins and high in fat quicken the creation of liver ketone bodies (KB) (particles made from fat breakdown). KB are used for energy creation in certain body parts. The creation and use of KB from fat breakdown are monitored both at the cellular and multi-cellular level. The ",
+      "jargon": 0.9569,
+      "explanation": 0.6923,
+      "fluency": 0.7718,
+      "coherence": 0.9424,
+      "fidelity": 0.9578
+    },
+    {
+      "record_idx": 183,
+      "variant": "abstract_enriched",
+      "score": 0.7773,
+      "text_snippet": "Pallister Hall syndrome is passed down by one of the parents. It is usually diagnosed in infants and children. It is diagnosed if it runs in the family, and the children have hypothalamic hamartoma (a non-cancer growth of tissues in the brain), and extra fingers or toes, but these are not the only s",
+      "jargon": 0.8905,
+      "explanation": 0.381,
+      "fluency": 0.7975,
+      "coherence": 0.9409,
+      "fidelity": 0.9613
+    },
+    {
+      "record_idx": 176,
+      "variant": "abstract_original",
+      "score": 0.6731,
+      "text_snippet": "46 year old male with past medical history of schizoaffective disorder and chronic lower back pain, was admitted for management of worsening depression and anxiety. He was started on gabapentin, 300mg twice daily for his back pain and anxiety symptoms. His only other medication was hydrocodone. Over",
+      "jargon": 0.8631,
+      "explanation": 0.2,
+      "fluency": 0.8363,
+      "coherence": 0.9495,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 309,
+      "variant": "abstract_original",
+      "score": 0.8121,
+      "text_snippet": "Each year, 4 to 5 million newborns receive state-mandated screening. Although the Advisory Committee on Heritable Disorders in Newborns and Children has identified 34 core conditions that should be incorporated into screening programs, each state manages, funds, and maintains its own program. State ",
+      "jargon": 0.9655,
+      "explanation": 0.5,
+      "fluency": 0.8939,
+      "coherence": 0.9451,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 135,
+      "variant": "abstract_original",
+      "score": 0.712,
+      "text_snippet": "Central nervous system adverse effects are commonly reported with pregabalin (PGB). On the other hand, movement disorders (MDs) associated with this drug were rarely described. However, their occurrence could significantly affect the quality of life of PGB users. This literature review aims to evalu",
+      "jargon": 0.9528,
+      "explanation": 0.2667,
+      "fluency": 0.7304,
+      "coherence": 0.9422,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 22,
+      "variant": "abstract_original",
+      "score": 0.8741,
+      "text_snippet": "The classification of diabetes was originally limited to only two categories called juvenile-onset diabetes mellitus, now known as type 1 diabetes mellitus, and adult-onset diabetes mellitus, now known as type 2 diabetes mellitus. This has grown to a recognition of more than 50 subcategories caused ",
+      "jargon": 0.9563,
+      "explanation": 0.7407,
+      "fluency": 0.8558,
+      "coherence": 0.94,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 235,
+      "variant": "abstract_original",
+      "score": 0.8837,
+      "text_snippet": "Although older, potentially sedating, \"first-generation\" antihistamines (H1-receptor antagonists) are commonly used in childhood, their central nervous system (CNS) effects have not been well-documented in young subjects. We hypothesized that diphenhydramine and hydroxyzine would affect CNS function",
+      "jargon": 0.9271,
+      "explanation": 0.7692,
+      "fluency": 0.9424,
+      "coherence": 0.9383,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 274,
+      "variant": "abstract_enriched",
+      "score": 0.8603,
+      "text_snippet": "New discoveries in treatments that suppress the immune system have helped patients with Nephrotic Syndrome (NS), a group of symptoms relating to the kidneys. However, the safety and effectiveness of these treatments has not been fully studied for recent cases in Japan. A study 5 years ago followed 3",
+      "jargon": 0.9145,
+      "explanation": 0.6842,
+      "fluency": 0.8616,
+      "coherence": 0.9395,
+      "fidelity": 0.9365
+    },
+    {
+      "record_idx": 63,
+      "variant": "abstract_enriched",
+      "score": 0.8777,
+      "text_snippet": "Kidneys play an important role in monitoring acid-base and electrolyte balance, which is a requirement for many metabolic processes and organ functions in the human body. Long-lasting kidney diseases threaten the regulatory functions, leading to changes in electrolyte and acid-base balance that can ",
+      "jargon": 0.9487,
+      "explanation": 0.6667,
+      "fluency": 0.8694,
+      "coherence": 0.9446,
+      "fidelity": 0.982
+    },
+    {
+      "record_idx": 193,
+      "variant": "abstract_enriched",
+      "score": 0.9078,
+      "text_snippet": "After peripheral nerves (the parts of the nervous system outside the brain and spinal cord) are injured, people often feel discomfort for a long time. A chemical called Substance P is involved in the process of feeling pain. Lowering the amount of this chemical involved in the transmission of nerve ",
+      "jargon": 0.9398,
+      "explanation": 0.8182,
+      "fluency": 0.9204,
+      "coherence": 0.9408,
+      "fidelity": 0.9369
+    },
+    {
+      "record_idx": 40,
+      "variant": "abstract_original",
+      "score": 0.7557,
+      "text_snippet": "Endometrial cancer (EC) is one of the most common and fatal gynecological cancers worldwide, but there is no effective treatment for the EC patients of progesterone resistance. Repurposing of existing drugs is a good strategy to discover new candidate drugs. In this text, perphenazine (PPZ), approve",
+      "jargon": 0.9371,
+      "explanation": 0.4,
+      "fluency": 0.7898,
+      "coherence": 0.9494,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 282,
+      "variant": "abstract_enriched",
+      "score": 0.9024,
+      "text_snippet": "The goal of this health technology policy analysis was to figure out, where, how, and when physiotherapy (PT) can best help patients after knee or hip replacement. We also hope to figure out the financial impact of the best PT strategies for Ontario. Specifically, we wanted to figure out how inpatie",
+      "jargon": 0.975,
+      "explanation": 0.7143,
+      "fluency": 0.9352,
+      "coherence": 0.9463,
+      "fidelity": 0.9661
+    },
+    {
+      "record_idx": 150,
+      "variant": "abstract_original",
+      "score": 0.7896,
+      "text_snippet": "Polycystic kidney disease (PKD) is a genetic disorder characterized by aberrant renal epithelial cell proliferation and formation and progressive growth of numerous fluid-filled cysts within the kidneys. Previously, we showed that there is elevated Notch signaling compared to normal renal epithelial",
+      "jargon": 0.9016,
+      "explanation": 0.5556,
+      "fluency": 0.8137,
+      "coherence": 0.9347,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 316,
+      "variant": "abstract_enriched",
+      "score": 0.8351,
+      "text_snippet": "Hip and knee replacement surgery is associated with significant pain around the time of the procedure. This can make recovery worse by increasing the risk of additional problems, length of stay, and cost. Historically, opioids were the main way to control pain around the time of surgery. However, op",
+      "jargon": 0.9274,
+      "explanation": 0.5,
+      "fluency": 0.9589,
+      "coherence": 0.9236,
+      "fidelity": 0.9622
+    },
+    {
+      "record_idx": 185,
+      "variant": "abstract_original",
+      "score": 0.7353,
+      "text_snippet": "Introduction: Pallister-Hall syndrome (PHS) is a rare autosomal dominant syndrome characterized by polydactyly, bifid or shortened epiglottis, visceral anomalies, hypothalamic hamartoma often combined with hypopituitarism. PHS is characterized by significant variability in the expression of clinical",
+      "jargon": 0.8702,
+      "explanation": 0.3636,
+      "fluency": 0.9195,
+      "coherence": 0.9348,
+      "fidelity": 0.0
+    },
+    {
+      "record_idx": 295,
+      "variant": "abstract_enriched",
+      "score": 0.8763,
+      "text_snippet": "While it took decades to learn that ferritin (an iron-containing protein) is more than a marker of iron storage level, it took some time during the COVID-19 pandemic (a pandemic caused by a virus that causes lung infections) to wonder why there are high levels of ferritin in patients with severe COV",
+      "jargon": 0.9241,
+      "explanation": 0.7222,
+      "fluency": 0.7942,
+      "coherence": 0.9447,
+      "fidelity": 0.9929
+    }
+  ]
+}
